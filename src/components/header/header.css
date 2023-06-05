@@ -1,56 +1,56 @@
-header {
+header{
     height: 100vh;
-    /*vh correspond to viewport height*/
     padding-top: 7rem;
     overflow: hidden;
 }
 
-.header__container {
+.header__container{
     height: 100%;
     text-align: center;
     position: relative;
+    overflow: hidden;
+
 }
 
-.cta {
+.cta{
     margin-top: 2.5rem;
     display: flex;
     gap: 1.2rem;
     justify-content: center;
 }
 
-.header__social {
+.header__social{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.8rem;
+    gap:0.8rem;
     position: absolute;
     left: 0;
     bottom: 3rem;
 }
 
-.header__social::after {
-    /*the after tag help us to draw the vertical line we have
-after the social icons*/
+.header__social::after{
     content: '';
     width: 1px;
     height: 2rem;
     background: var(--color-primary);
 }
 
-.my_image {
-    background: linear-gradient(var(--color-primary), transparent);
+.my_image{
+    background: linear-gradient(
+        var(--color-primary), transparent
+    );
     width: 22rem;
-    Height: 35rem;
+    height:15rem;
     position: absolute;
     left: calc(50% - 11rem);
-    /*this help to place the image to the middle of screen*/
     margin-top: 4rem;
-    border-radius: 12rem 12rem 0 0;
+    border-radius: 10rem 10rem 0 0;
     overflow: hidden;
-    padding: 0rem 1.5rem 1.5rem 1.5rem;
+    padding: 0rem 1.7rem 1.7rem 1.7rem;
 }
 
-.scroll__down {
+.scroll__down{
     position: absolute;
     right: -2rem;
     bottom: 5rem;
@@ -59,21 +59,22 @@ after the social icons*/
     font-weight: 0.9rem;
 }
 
-/*This is what we call media query: here we define the css that will be apply for a
-specific screen*/
-@media screen and(max-width:1024px) {
-    header {
-        height: 68vh
+@media only screen and(max-width:1024px) {
+    header{
+        height:68vh
     }
+    
 }
 
-@media screen and(max-width:600px) {
-    header {
-        height: 100vh
+@media only screen and (max-width: 600px) {
+    
+    header{
+        height:100vh;
+        
     }
 
-    .header__social,
-    .scroll__down {
+    .header__social, .scroll__down{
         display: none;
     }
+
 }
